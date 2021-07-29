@@ -7,12 +7,9 @@ resource "aws_instance" "sample" {
   }
 }
 
-
-
-
 resource "aws_security_group" "allow_ssh" {
-  name                       = "allow_ssh"
-  description                = "Allow_ssh"
+  name        = "allow_ssh"
+  description = "allow_ssh"
 
   ingress {
     description              = "SSH"
