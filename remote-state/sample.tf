@@ -12,7 +12,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket                   = "terraform-kp58"
+    bucket                  = "terraform-kp58"
     key                      = "sample/terraform.tfstate"
     region                   = "us-east-1"
     dynamodb_table           = terraform
