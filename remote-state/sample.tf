@@ -7,13 +7,14 @@ resource "aws_instance" "sample" {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region                    = "us-east-1"
 }
 
 terraform {
   backend "s3" {
-    bucket = "terraform-kp58"
-    key    = "sample/terraform.tfstate"
-    region = "us-east-1"
+    bucket                   = "terraform-kp58"
+    key                      = "sample/terraform.tfstate"
+    region                   = "us-east-1"
+    dynamodb_table           = terraform
   }
 }
