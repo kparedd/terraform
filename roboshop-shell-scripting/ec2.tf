@@ -5,7 +5,7 @@ resource "aws_spot_instance_request" "cheap_worker" {
   instance_type           = "t3.micro"
   wait_for_fulfillment    = true
 
-  tags = {
+  tags                    = {
     Name                  = element(var.COMPONENTS, count.index )
   }
 }
