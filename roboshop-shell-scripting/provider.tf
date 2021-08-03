@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-terraform  {
+terraform {
   backend "s3" {
     bucket            = "terraform-kp58"
     key               = "roboshop/shell-scripting/terraform.tfstate"
